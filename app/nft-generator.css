@@ -1,0 +1,33 @@
+.nft-studio{color:#dfebe4;min-width:0}
+.nft-studio .micro-label{color:#b4ffc8;font:10px/1.5 monospace;letter-spacing:1.5px}
+.nft-hero{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:22px;padding:22px 20px;border:1px solid #355844;border-radius:14px;background:radial-gradient(ellipse at top left,#3a6b4f44,transparent 70%),linear-gradient(135deg,#101f18,#0b1410 55%,#151028)}
+.nft-hero h2{font-size:clamp(26px,3vw,34px);font-weight:500;letter-spacing:-1px;margin:10px 0 12px;color:#f2f7f4}
+.nft-hero p:not(.micro-label){margin:0;max-width:52ch;color:#9eb3a6;font-size:14px;line-height:1.7}
+.nft-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(72px,1fr));gap:10px;min-width:min(100%,280px)}
+.nft-hero-stats>div{padding:12px 10px;border:1px solid #3a5845;border-radius:10px;background:#0c1712cc;text-align:center}
+.nft-hero-stats b{display:block;font-size:18px;color:#a5ffb4;font-family:monospace}
+.nft-hero-stats span{display:block;margin-top:6px;font-size:10px;letter-spacing:1px;color:#8da898;text-transform:uppercase}
+.nft-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.85fr);gap:28px;margin-top:18px}
+.nft-preview-pane canvas{width:100%;height:auto;border:1px solid #2f4d3a;border-radius:12px;background:#050807;display:block}
+.nft-preview-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.nft-controls h3{font-size:24px;font-weight:500;margin:8px 0 18px;color:#eef6f1}
+.nft-controls .field-label{display:grid;gap:8px;margin-bottom:14px;font-size:12px;color:#a8bdb1}
+.nft-controls input[type=range]{width:100%}
+.nft-check{display:flex;align-items:center;gap:10px;margin:8px 0 16px;font-size:13px;color:#c5d7cc}
+.nft-check input{width:16px;height:16px;accent-color:#a5ffb4}
+.nft-trait-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 16px}
+.nft-trait-list>div{padding:10px 12px;border:1px solid #314a3b;border-radius:8px;background:#0d1612}
+.nft-trait-list span{display:block;font-size:10px;letter-spacing:1px;color:#8da898;text-transform:uppercase}
+.nft-trait-list b{display:block;margin-top:5px;font-size:13px;color:#dff5e8;font-weight:500}
+.nft-about{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:12px}
+.nft-about .module-card svg{color:#b4ffc8;margin-bottom:8px}
+@media(max-width:1000px){
+ .nft-hero{flex-direction:column}
+ .nft-hero-stats{width:100%}
+ .nft-grid{gap:22px}
+}
+@media(max-width:700px){
+ .nft-grid,.nft-about{grid-template-columns:1fr}
+ .nft-trait-list{grid-template-columns:1fr}
+ .nft-hero-stats{grid-template-columns:1fr 1fr 1fr}
+}

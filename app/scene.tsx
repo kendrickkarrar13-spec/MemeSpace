@@ -3,7 +3,7 @@ import {useEffect,useRef,useState} from 'react';
 type Props={inside:boolean;warp:boolean;reduced:boolean;quality:boolean;onReady:()=>void;focus?:string|null;glow?:number;paused?:boolean};
 type Point={x:number;y:number;z:number;nx:number;ny:number;nz:number;seed:number;eye:number};
 const TAU=Math.PI*2;
-const receptors:Record<string,[number,number,number]>={history:[-.65,.35,.5],coins:[.6,.4,.5],games:[-.78,-.15,.25],chat:[.78,0,.25],media:[-.45,-.5,.4],learn:[.5,-.5,.4],wallet:[0,.75,.3],profile:[0,-.65,.4]};
+const receptors:Record<string,[number,number,number]>={history:[-.65,.35,.5],coins:[.6,.4,.5],games:[-.78,-.15,.25],chat:[.78,0,.25],media:[-.45,-.5,.4],nft:[.88,.28,.2],learn:[.5,-.5,.4],wallet:[0,.75,.3],profile:[0,-.65,.4],social:[0,.05,.55]};
 function eyelid(t:number){const phase=t%6.3;return Math.exp(-(((phase-5.3)/.085)**2))+.65*Math.exp(-(((phase-5.55)/.07)**2));}
 function decode(buffer:ArrayBuffer):Point[]{const a=new Float32Array(buffer),out:Point[]=[];for(let i=0;i<a.length;i+=6)out.push({x:a[i],y:a[i+1],z:a[i+2],nx:a[i+3],ny:a[i+4],nz:a[i+5],seed:((i*16807)%2147483647)/2147483647,eye:0});return out;}
 function atlas(){const c=document.createElement('canvas');c.width=32*2*3;c.height=32*24;const x=c.getContext('2d')!;x.textAlign='center';x.textBaseline='middle';x.font='600 27px monospace';for(let palette=0;palette<3;palette++)for(let b=0;b<24;b++)for(let d=0;d<2;d++){const intensity=.12+b/23*.88;const rgb=palette===0?[107,255,150]:palette===1?[188,130,255]:[220,255,236];x.fillStyle=`rgb(${rgb.map(v=>Math.round(v*intensity)).join(',')})`;x.fillText(String(d),(palette*2+d)*32+16,b*32+16);}return c;}

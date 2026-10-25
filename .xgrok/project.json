@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "setup": "integrated",
+  "languages": [
+    "JavaScript/TypeScript",
+    "TypeScript"
+  ],
+  "stacks": [
+    "Node.js",
+    "TypeScript",
+    "React/Next"
+  ],
+  "markers": [
+    "package.json",
+    "tsconfig.json"
+  ],
+  "packageName": "memespace-local",
+  "suggestedRun": "npm run dev",
+  "suggestedTest": "npm test",
+  "createdAt": "2026-10-25T22:05:32.043Z",
+  "tool": "xgrok"
+}
